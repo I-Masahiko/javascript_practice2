@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascript_practice</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="title">
+
+        <h1>【JavaScript課題2】簡易トドリスト</h1>
+          <hr size="1" color="lightgrey">
+        <h2>以下と同じものを作成してください</h2>
+          <hr size="1" color="lightgrey">
+        <p>ToDoリスト</p>
+
+      </div>
+
+      <div class="choose-list">
+        <input type="radio" id="every" name="check" value="すべて">すべて
+        <input type="radio" id="ctn" name="check" value="作業中">作業中
+        <input type="radio" id="cmp" name="check" value="完了">完了
+
+      </div>
+    <table>
+
+
+      <thead>
+        <tr>
+          <th style="margin-left:5px;">ID</th>
+          <th style="margin-left:5px;text-align:center;">コメント</th>
+          <th style="margin-left:5px;">状態</th>
+        </tr>
+      </thead>
+
+      <tbody id="todoList">
+      </tbody>
+
+      </table>
+
+      <div class="add">
+        <p>新規タスクの追加</p>
+
+        <input type="text" id="text" style="width:175px;">
+        <button type="button" name="button" id="addButton">追加</button>
+
+      </div>
+
+
+
+      <script src="main.js"></script>
+    </div>
+
+  </body>
+</html>
