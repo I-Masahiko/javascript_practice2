@@ -11,16 +11,13 @@
     const cmp = document.getElementById(`cmp`);
 
 
-
-
-
-  addButton.addEventListener(`click`, ()=>{
-    const textValue = text.value;
+    addButton.addEventListener(`click`, ()=>{
+      const textValue = text.value;
 
       todo.push(textValue);
       text.value = "";
 
-    console.log(todo);
+      console.log(todo);
 
       const working = `作業中`;
       const perfect = `完了`;
@@ -41,41 +38,47 @@
 
         ele.appendChild(comment);
 
-      const stateEle = document.createElement(`td`);
-      const stateButton = document.createElement(`button`);
+      function addstb() {
+        const stateEle = document.createElement(`td`);
+        const stateButton = document.createElement(`button`);
         stateButton.setAttribute(`value`, `working`);
         stateButton.textContent = working;
 
         ele.appendChild(stateEle);
         stateEle.appendChild(stateButton);
 
-      const deleteEle = document.createElement(`td`);
-      const deleteButton = document.createElement(`button`);
-        deleteButton.setAttribute(`value`, `finish`);
-        deleteButton.textContent = finish;
-
-        ele.appendChild(deleteEle);
-        deleteEle.appendChild(deleteButton);
-
-    // ----------------------------------
-    // ボタンの変更と行削除
-
-      stateButton.addEventListener(`click`, ()=>{
-      if (stateButton.value === `working`) {
-        stateButton.setAttribute(`value`, `perfect`);
-        stateButton.textContent = perfect;
-      }else {
-        stateButton.setAttribute(`value`, `working`);
-        stateButton.textContent = working;
+        stateButton.addEventListener(`click`, function(){
+          if (stateButton.value === `working`) {
+            stateButton.setAttribute(`value`, `perfect`);
+            stateButton.textContent = perfect;
+          } else {
+            stateButton.setAttribute(`value`, `working`);
+            stateButton.textContent = working;
+          }
+        })
       }
-    })
 
-      deleteButton.addEventListener(`click`, ()=>{
-        todoList.removeChild(ele);
-      })
 
-    //------------------------------------
-    //　radioタグ　選択ごとの表示
+      function  adddlt(){
+        const deleteEle = document.createElement(`td`);
+        const deleteButton = document.createElement(`button`);
+          deleteButton.setAttribute(`value`, `finish`);
+          deleteButton.textContent = finish;
+
+          ele.appendChild(deleteEle);
+          deleteEle.appendChild(deleteButton);
+
+        deleteButton.addEventListener(`click`, function(){
+            todoList.removeChild(ele);
+          })
+
+        }
+
+
+      addstb();
+
+      adddlt();
+
 
 
 
