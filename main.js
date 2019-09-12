@@ -72,7 +72,7 @@
             todoList.removeChild(ele);
           })
           return deleteButton;
-        }
+        } 
 
         const deleteButton = addDeleteButton();
         const deleteEle = document.createElement(`td`);
