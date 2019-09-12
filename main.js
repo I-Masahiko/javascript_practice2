@@ -17,6 +17,7 @@
       todo.push(textValue);
       text.value = "";
 
+
       console.log(todo);
 
       const working = `作業中`;
@@ -72,7 +73,7 @@
             todoList.removeChild(ele);
           })
           return deleteButton;
-        } 
+        }
 
         const deleteButton = addDeleteButton();
         const deleteEle = document.createElement(`td`);
