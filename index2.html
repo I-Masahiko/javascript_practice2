@@ -1,57 +1,35 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>javascript_practice</title>
-    <link rel="stylesheet" href="stylesheet.css">
-  </head>
-  <body>
-    <div class="main">
-      <div class="title">
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo</title>
+</head>
+<body>
+  <h1>Todoリスト</h1>
 
-        <h1>【JavaScript課題2】簡易ToDoリスト</h1>
-          <hr size="1" color="lightgrey">
-        <h2>以下と同じものを作成してください</h2>
-          <hr size="1" color="lightgrey">
-        <p>ToDoリスト</p>
+  <div>
+	<input type="radio" name="swich-display" id="radio-all" checked="checked">全て
+	<input type="radio" name="swich-display" id="radio-doing">作業中
+	<input type="radio" name="swich-display" id="radio-complete">完了
+  </div>
 
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>コメント</th>
+        <th>状態</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="todo-list">
+    </tbody>
+  </table>
 
-      </div>
+  <h2>新規タスクの追加</h2>
+  <input type="text" id="task-input">
+  <button id="add-button">追加</button>
 
-      <div class="choose-list">
-        <input type="radio" id="every" name="check" value="すべて">すべて
-        <input type="radio" id="ctn" name="check" value="作業中">作業中
-        <input type="radio" id="cmp" name="check" value="完了">完了
-
-      </div>
-    <table>
-
-
-      <thead>
-        <tr>
-          <th style="margin-left:5px;">ID</th>
-          <th style="margin-left:5px;text-align:center;">コメント</th>
-          <th style="margin-left:5px;">状態</th>
-        </tr>
-      </thead>
-
-      <tbody id="todoList">
-      </tbody>
-
-      </table>
-
-      <div class="add">
-        <p>新規タスクの追加</p>
-
-        <input type="text" id="text" style="width:175px;">
-        <button type="button" name="button" id="addButton">追加</button>
-
-      </div>
-
-
-
-      <script src="main.js"></script>
-    </div>
-
-  </body>
+  <script src="kadai2.js"></script>
+</body>
 </html>
